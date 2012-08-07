@@ -1,0 +1,151 @@
+export GREP_COLOR='1;37;41'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+export LD_PRELOAD="/usr/local/lib/stderred.so"
+export LD_LIBRARY_PATH="/usr/lib/jvm/java-7-openjdk-i386/jre/lib/i386:/usr/local/lib/"
+export ECHO_NEST_API_KEY="WYCRXJO5BNOAKPK1O"
+export PKG_CONFIG_PATH="/usr/share/pkgconfig"
+export EDITOR="/usr/bin/vim"
+export JACKDHOME="/home/em"
+export JACKDUSER="em"
+export RUBYLIB="/usr/lib/ruby"
+export LLVM="/home/em/llvm/Release"
+export VIMCLOJURE_SERVER_JAR="/usr/share/vim/vim73/bundle/VimClojure/lib/server-2.3.0.jar"
+
+alias sudo='A=`alias` sudo  '
+alias s='sudo'
+alias l='ls -FGC --color=auto'
+
+function chpwd() {
+	emulate -L zsh
+	l
+}
+
+c() {
+	if [[ "${#1}" == 0 ]]; then
+		cd /home/em/
+	else
+		cd "$1"
+	fi
+}
+
+man() {
+	/usr/bin/man $@ || (help $@ 2> /dev/null && help $@ | less)
+}
+
+alias l1='ls -1'
+alias ll='ls -lh'
+alias la='ls -a'
+alias lt='ls -t'
+alias lz='ls -lSh'
+alias lt1='ls -t1'
+alias llt='ls -lth'
+alias lla='ls -lha'
+alias l1a='ls -l1a'
+alias lta='ls -lta'
+alias lt1a='ls -t1a'
+alias llta='ls -lhta'
+alias b='c -'
+alias -g ds='/home/em/Skrivbord'
+alias -g d='/home/em/H*mtningar'
+alias -g doc='/home/em/Dokument'
+alias -g L='/home/em/Dokument/LaTeX'
+alias -g notes='/home/em/Notes'
+alias -g p='/home/em/Bilder'
+alias -g mus='/home/em/Musik'
+alias -g vid='/home/em/Video'
+alias -g lap='em@`hostname -I`'
+alias -g laps='em@`hostname -I`:'
+alias -g home='em@ludemek.com'
+alias -g homes'em@ludemek.com'
+alias -g ..='..'
+alias -g .2='../..'
+alias -g .3='../../..'
+alias -g .4='../../../..'
+alias v='vim'
+alias sv='sudo vim'
+alias mk='mkdir -p'
+alias m='mv'
+alias cp='cp -r'
+alias r='rm -r'
+alias sshx='ssh -X'
+
+alias -s tex='vim'
+alias -s txt='vim'
+alias -s mp4='vlc'
+alias -s webm='vlc'
+alias -s flv='vlc'
+alias -s avi='vlc'
+alias -s flac='mplayer'
+alias -s mp3='mplayer'
+alias -s wav='mplayer'
+alias -s ogg='mplayer'
+alias -s git='git clone'
+alias -s pd='pd-extended'
+alias -s pdf='evince'
+
+alias ag='apt-get'
+alias acs='apt-cache search'
+alias afs='apt-file search --regexp'
+alias asrc='apt-get source'
+alias abd='sudo apt-get build-dep'
+alias ac='sudo apt-get clean'
+alias ad='sudo apt-get update'
+alias adu='sudo apt-get update && sudo apt-get upgrade'
+alias afu='sudo apt-file update'
+alias au='sudo apt-get upgrade'
+alias ai='sudo apt-get install'
+alias ap='sudo apt-get purge'
+alias ar='sudo apt-get remove'
+alias di='sudo dpkgi -i'
+
+alias bi='bundle install'
+
+alias dpl='dpkg -l | a'
+alias jack='`cat /home/em/.jackdrc` &'
+alias jjar='java -Xms1024m -jar'
+alias j='jp2a'
+alias ff=fbff
+alias e=elinks
+alias sr='surfraw -browser=elinks'
+alias srg='surfraw -browser=elinks google'
+alias ipod='cd /media/ipod'
+alias a='ack-grep'
+alias screencast='ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq'
+alias 7z='7za x'
+alias scp='scp -vpr'
+alias free='free -m'
+alias adb='sudo /home/em/android/platform-tools/adb'
+alias gcal='gcalcli'
+alias goo='google'
+alias ytdl='noglob youtube-dl'
+alias iftop='sudo iftop'
+alias p2h='pdftohtml'
+alias aria='aria2c'
+alias cdoc='catdoc'
+alias ppt='catppt'
+alias x='xls2csv'
+alias vn='vim INSTALL*'
+alias vr='vim README*'
+alias what='whatis'
+alias where='whereis'
+alias ap='apropos'
+alias in='./configure; make; sudo make install'
+alias pin='perl Makefile.*; make; sudo make install'
+alias pyn='python setup.py build; sudo python setup.py install'
+alias t='/home/em/.todo/todo.sh'
+alias todo='vim /home/em/Notes/todo/todo.txt'
+alias untar='tar xfv'
+alias unrar='unrar-free x'
+alias mnt='sudo mount'
+alias my='mysql'
+alias V='vlc -I ncurses'
+alias dir2ogg='dir2ogg -v -r -q10 --convert-all --delete-input'
+alias gtfo='sudo umount'
+alias f='dfc'
+alias u='du -hsc'
+alias vs='sudo visudo'
+alias processing='/home/em/processing-1.5.1/processing'
+alias arduino='/home/em/arduino-1.0/arduino'

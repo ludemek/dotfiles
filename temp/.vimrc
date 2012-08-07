@@ -125,7 +125,7 @@ let vimclojure#WantNailgun = 1
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-let g:googlereader_email='ludek.me@gmail.com'
-let g:googlereader_passwd="I'm not telling you"
+let g:googlereader_email=
+let g:googlereader_passwd=
 
 set runtimepath+=/usr/share/lilypond/2.12.3/vim/

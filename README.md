@@ -6,5 +6,5 @@ This is a collection of a few dotfiles I have. Not terribly original, but I supp
 These dotfiles are for:
   - zsh
   - bash
-  - vim
+  - vim (vimrc.local, to be specific. My vimrc is unchanged from the default distribution.)
   - whatever else comes up
